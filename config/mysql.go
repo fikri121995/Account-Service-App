@@ -10,7 +10,7 @@ import (
 func ConnectToDB() *sql.DB {
   // <username>:<password>@tcp(<hostname>:<port>)/<db_name>
   user := "root"
-  pass := ""
+  pass := "golang"
   host := "localhost"
   port := "3306"
   dbname := "gp_4"

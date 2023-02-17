@@ -6,10 +6,10 @@ import (
 	"be15/gp4/entities"
 )
 
-func Historyviewother(db *sql.DB, AccountID int) {
+func Historyviewother(db *sql.DB, Akun string) {
 	var Users entities.Users
 	err := db.
-		QueryRow("select Nama, Nomor_Telepon from Topup where AccountID = ?", AccountID).
+		QueryRow("select Nama, Nomor_Telepon from users where id = ?", Akun).
 		Scan(&Users.Nama, &Users.Nomor_Telepon)
 	if err != nil {
 		fmt.Println(err.Error())

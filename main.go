@@ -5,6 +5,7 @@ import (
 	"be15/gp4/controllers"
 	"be15/gp4/entities"
 	"fmt"
+
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -36,21 +37,19 @@ func main() {
 			var nama string
 			fmt.Println("masukan nama anda:")
 			fmt.Scanf("%s\n", &nama)
-	
+
 			var Akunid string
 			fmt.Println("masukan Akunid baru anda:")
 			fmt.Scanf("%s\n", &Akunid)
-	
+
 			var Nomor_Telepon int
 			fmt.Println("masukan nomor_telepon anda:")
 			fmt.Scanf("%d\n", &Nomor_Telepon)
-	
+
 			var Password string
 			fmt.Println("masukan Password baru anda:")
 			fmt.Scanf("%v\n", &Password)
-	
-			controllers.Register(db, Akunid, nama, Nomor_Telepon, Password)
-		
+
 		case 2:
 			// Login
 			datarow := entities.Users{}
@@ -106,7 +105,7 @@ func main() {
 			var Nama_Bank string
 			fmt.Println("Masukan nama bank:")
 			fmt.Scanln(&Nama_Bank)
-			controllers.Transfer(db, AccountId , Akun_ID_Penerima , Jumlah_Transfer , Nama_Bank)
+			controllers.Transfer(db, AccountId, Akun_ID_Penerima, Jumlah_Transfer, Nama_Bank)
 
 		case 8:
 			// History Top-up
@@ -122,7 +121,7 @@ func main() {
 			controllers.Historytransfer(db, id)
 		case 10:
 			// View Other User Profile
-			var id int
+			var id string
 			fmt.Println("masukan id anda:")
 			fmt.Scanln(&id)
 			controllers.Historyviewother(db, id)

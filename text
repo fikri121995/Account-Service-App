@@ -1,0 +1,20 @@
+langkah pertama kita membuat erd kita membuat 
+ada 3 entititas user topup transfer  
+user ini nantinya akan digunakan membuat ,mengelolah
+menampilkan register, login , update, delete, view akun 
+selnajutnya ada topup nantinya akan menampilkan topup ,history topup, 
+selnajutnya transaksi nantinya juga akan menampilkan transaksi, histori transaksi
+setelah semuanya kita buat berrelasi entitsas 1 denga lainnya 
+
+
+lalu kita membuat data basenya kita hidupnya terlebih dahulu data 
+basenya setelah itu kita membuat databasenya 
+kita membuat table entitasnya user , topup, transaksi 
+yang nantinya sama beruntuk menampilkan sama user register,login,update ,delete 
+table topup untuk menampilkan history top 
+transaksi sama juga demikian untuk menampilkan transaksi dan history transaksi 
+selnajutnya kita insert atau menambahkan data yg nantinyaakan menjadinya output yg ikin kita tampilkan 
+
+
+
+

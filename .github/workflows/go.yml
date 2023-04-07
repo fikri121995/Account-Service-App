@@ -1,0 +1,26 @@
+name: otomasi deploy server 
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [synchronize]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: multiple command
+        uses: appleboy/ssh-action@v0.1.9
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd Altera 
+            rm -rf Account-Service-App 
+            git clone https://github.com/wantazulfikri12/Account-Service-App.git
+            cd Account-Service-App
+            go run main.go
